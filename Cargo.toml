@@ -1,0 +1,12 @@
+[workspace]
+resolver = "3"
+members = [
+    "alchemy-game",
+]
+
+[workspace.dependencies]
+# Game Framework
+bevy = { version = "0.19", default-features = false }
+
+# Bevy Audio
+bevy_kira_audio = { version = "0.26" }

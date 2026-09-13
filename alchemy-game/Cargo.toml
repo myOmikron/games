@@ -1,0 +1,15 @@
+[package]
+name = "alchemy-game"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bevy = { workspace = true, features = [
+    "2d",
+    "serialize",
+    "bevy_ui"
+] }
+bevy_kira_audio = { workspace = true }
+ 
+[features]
+dev = ["bevy/dev"]
