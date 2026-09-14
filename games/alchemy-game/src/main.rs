@@ -1,3 +1,5 @@
+pub mod console;
+
 use avian2d::PhysicsPlugins;
 use bevy::DefaultPlugins;
 use bevy::app::App;

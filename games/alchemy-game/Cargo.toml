@@ -20,6 +20,7 @@ bevy_firefly = { workspace = true }
 moonshine-save = { workspace = true }
 bevy_enoki = { workspace = true }
 bevy_tweening = { workspace = true }
+bevy_enhanced_input = { workspace = true }
 
 tracing = { workspace = true }
 
