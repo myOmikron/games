@@ -2,6 +2,7 @@ use avian2d::PhysicsPlugins;
 use bevy::DefaultPlugins;
 use bevy::app::App;
 use bevy_ecs_ldtk::LdtkPlugin;
+use bevy_enhanced_input::EnhancedInputPlugin;
 use bevy_enoki::EnokiPlugin;
 use bevy_firefly::app::FireflyPlugin;
 use bevy_kira_audio::AudioPlugin;
@@ -20,6 +21,7 @@ fn main() {
         AudioPlugin,
         FireflyPlugin,
         TweeningPlugin,
+        EnhancedInputPlugin,
         YarnSpinnerPlugin::new(),
         PhysicsPlugins::default(),
     ));
