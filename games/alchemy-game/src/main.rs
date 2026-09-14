@@ -1,5 +1,3 @@
-pub mod console;
-
 use avian2d::PhysicsPlugins;
 use bevy::DefaultPlugins;
 use bevy::app::App;
@@ -9,6 +7,10 @@ use bevy_firefly::app::FireflyPlugin;
 use bevy_kira_audio::AudioPlugin;
 use bevy_tweening::TweeningPlugin;
 use bevy_yarnspinner::prelude::YarnSpinnerPlugin;
+
+use crate::camera::CameraPlugin;
+
+pub mod camera;
 
 fn main() {
     let mut app = App::new();
@@ -30,5 +32,5 @@ fn main() {
         app.add_plugins((EguiPlugin::default(), WorldInspectorPlugin::new()));
     }
 
-    app.run();
+    app.add_plugins(CameraPlugin).run();
 }
