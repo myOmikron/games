@@ -21,7 +21,9 @@ bevy_asset_loader = { version = "~0.27" } # Asset collections
 bevy_common_assets = { version = "~0.17" } # Common assets
 
 # Debugging
-bevy-inspector-egui = { version = "0.37" }
+bevy-inspector-egui = { version = "0.37" } # Inspector UI
+bevy_console = { version = "~0.18" } # Console using clap
+clap = { version = "~4", features = ["derive"] }
 
 # Dialogues
 bevy_yarnspinner = { version = "0.9" }

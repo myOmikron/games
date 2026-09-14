@@ -7,7 +7,7 @@ edition = "2024"
 bevy = { workspace = true, features = [
     "2d",
     "serialize",
-    "bevy_ui"
+    "ui"
 ] }
 bevy_kira_audio = { workspace = true }
 bevy-inspector-egui = { workspace = true, optional = true }
@@ -20,6 +20,8 @@ bevy_firefly = { workspace = true }
 moonshine-save = { workspace = true }
 bevy_enoki = { workspace = true }
 bevy_tweening = { workspace = true }
+bevy_console = { workspace = true }
+clap = { workspace = true }
 
 tracing = { workspace = true }
 
