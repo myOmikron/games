@@ -1,0 +1,31 @@
+[package]
+name = "alchemy-game"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bevy = { workspace = true, features = [
+    "2d",
+    "serialize",
+    "bevy_ui"
+] }
+bevy_kira_audio = { workspace = true }
+bevy-inspector-egui = { workspace = true, optional = true }
+bevy_yarnspinner = { workspace = true }
+bevy_common_assets = { workspace = true, features = ["json", "ron"] }
+bevy_asset_loader = { workspace = true }
+bevy_ecs_ldtk = { workspace = true }
+avian2d = { workspace = true }
+bevy_firefly = { workspace = true }
+moonshine-save = { workspace = true }
+bevy_enoki = { workspace = true }
+bevy_tweening = { workspace = true }
+
+tracing = { workspace = true }
+
+serde = { workspace = true }
+serde_json = { workspace = true }
+ron = { workspace = true }
+
+[features]
+dev = ["bevy/dev", "bevy/dynamic_linking", "dep:bevy-inspector-egui"]

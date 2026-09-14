@@ -1,12 +1,66 @@
 [workspace]
 resolver = "3"
 members = [
-    "alchemy-game",
+    "games/*",
 ]
 
 [workspace.dependencies]
+
 # Game Framework
 bevy = { version = "0.19", default-features = false }
 
-# Bevy Audio
+###############
+### Game specific
+###############
+
+# Audio
 bevy_kira_audio = { version = "0.26" }
+
+# Assets
+bevy_asset_loader = { version = "~0.27" } # Asset collections
+bevy_common_assets = { version = "~0.17" } # Common assets
+
+# Debugging
+bevy-inspector-egui = { version = "0.37" }
+
+# Dialogues
+bevy_yarnspinner = { version = "0.9" }
+
+# Savegames
+moonshine-save = { version = "~0.7" }
+
+# Screenshakes and other functions
+bevy_tweening = { version = "~0.16" }
+
+###############
+##### 2D ######
+###############
+
+# LDtk support
+bevy_ecs_ldtk = { version = "~0.15", features = ["atlas"] }
+
+# Lighting
+bevy_firefly = { version = "~0.19" }
+
+# Particles
+bevy_hanabi = { version = "~0.19" } # GPU accelerated
+bevy_enoki = { version = "~0.7" } # RON enabled CPU based
+
+# Physics
+avian2d = { version = "~0.7" }
+
+###############
+##### 3D ######
+###############
+
+
+###############
+#### Utils ####
+###############
+
+tracing = { version = "~0.1" }
+
+# Serialization
+serde = { version = "~1", features = ["derive"] }
+serde_json = { version = "~1" }
+ron = { version = "~0.12" }
