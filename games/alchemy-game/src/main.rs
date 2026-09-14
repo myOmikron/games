@@ -13,6 +13,7 @@ use crate::app::GamePlugin;
 
 pub mod app;
 pub mod camera;
+pub mod states;
 
 fn main() {
     let mut app = App::new();
