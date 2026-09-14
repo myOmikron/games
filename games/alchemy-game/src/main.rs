@@ -1,7 +1,6 @@
 use avian2d::PhysicsPlugins;
 use bevy::DefaultPlugins;
 use bevy::app::App;
-use bevy_console::ConsolePlugin;
 use bevy_ecs_ldtk::LdtkPlugin;
 use bevy_enoki::EnokiPlugin;
 use bevy_firefly::app::FireflyPlugin;
@@ -16,7 +15,6 @@ fn main() {
         EnokiPlugin,
         AudioPlugin,
         FireflyPlugin,
-        ConsolePlugin,
         TweeningPlugin,
         YarnSpinnerPlugin::new(),
         PhysicsPlugins::default(),
@@ -27,11 +25,7 @@ fn main() {
         use bevy_inspector_egui::bevy_egui::EguiPlugin;
         use bevy_inspector_egui::quick::WorldInspectorPlugin;
 
-        if !app.is_plugin_added::<EguiPlugin>() {
-            app.add_plugins(EguiPlugin::default());
-        }
-
-        app.add_plugins(WorldInspectorPlugin::new());
+        app.add_plugins((EguiPlugin::default(), WorldInspectorPlugin::new()));
     }
 
     app.run();

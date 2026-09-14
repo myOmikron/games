@@ -20,8 +20,6 @@ bevy_firefly = { workspace = true }
 moonshine-save = { workspace = true }
 bevy_enoki = { workspace = true }
 bevy_tweening = { workspace = true }
-bevy_console = { workspace = true }
-clap = { workspace = true }
 
 tracing = { workspace = true }
 
@@ -30,4 +28,8 @@ serde_json = { workspace = true }
 ron = { workspace = true }
 
 [features]
-dev = ["bevy/dev", "bevy/dynamic_linking", "dep:bevy-inspector-egui"]
+dev = [
+    "bevy/dev",
+    "bevy/dynamic_linking",
+    "dep:bevy-inspector-egui",
+]
