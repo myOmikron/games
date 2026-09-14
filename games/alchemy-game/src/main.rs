@@ -9,8 +9,9 @@ use bevy_kira_audio::AudioPlugin;
 use bevy_tweening::TweeningPlugin;
 use bevy_yarnspinner::prelude::YarnSpinnerPlugin;
 
-use crate::camera::CameraPlugin;
+use crate::app::GamePlugin;
 
+pub mod app;
 pub mod camera;
 
 fn main() {
@@ -34,5 +35,5 @@ fn main() {
         app.add_plugins((EguiPlugin::default(), WorldInspectorPlugin::new()));
     }
 
-    app.add_plugins(CameraPlugin).run();
+    app.add_plugins(GamePlugin).run();
 }
