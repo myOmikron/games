@@ -24,10 +24,14 @@ fn main() {
 
     #[cfg(feature = "dev")]
     {
-        use bevy_inspector_egui::WorldInspectorPlugin;
         use bevy_inspector_egui::bevy_egui::EguiPlugin;
+        use bevy_inspector_egui::quick::WorldInspectorPlugin;
 
-        app.add_plugins((WorldInspectorPlugin::new(), EguiPlugin::default()));
+        if !app.is_plugin_added::<EguiPlugin>() {
+            app.add_plugins(EguiPlugin::default());
+        }
+
+        app.add_plugins(WorldInspectorPlugin::new());
     }
 
     app.run();
