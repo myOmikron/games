@@ -5,6 +5,8 @@ use bevy_asset_loader::loading_state::LoadingStateAppExt;
 use bevy_asset_loader::prelude::LoadingState;
 
 use crate::camera::CameraPlugin;
+use crate::character::CharacterPlugin;
+use crate::player::PlayerPlugin;
 use crate::states::GameState;
 use crate::states::PlayMode;
 
@@ -12,11 +14,11 @@ pub struct GamePlugin;
 
 impl Plugin for GamePlugin {
     fn build(&self, app: &mut App) {
-        app.add_plugins(CameraPlugin)
+        app.add_plugins((CameraPlugin, CharacterPlugin, PlayerPlugin))
             .insert_state(GameState::default())
             .insert_state(PlayMode::default())
             .add_loading_state(
-                LoadingState::new(GameState::Loading).continue_to_state(GameState::MainMenu),
+                LoadingState::new(GameState::Loading).continue_to_state(GameState::Playing),
             );
     }
 }

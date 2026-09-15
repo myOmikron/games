@@ -13,6 +13,8 @@ use crate::app::GamePlugin;
 
 pub mod app;
 pub mod camera;
+pub mod character;
+pub mod player;
 pub mod states;
 
 fn main() {
