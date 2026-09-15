@@ -2,6 +2,7 @@ use bevy::app::App;
 use bevy::app::FixedUpdate;
 use bevy::app::Plugin;
 
+pub mod components;
 pub mod movement;
 
 pub struct CharacterPlugin;

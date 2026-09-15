@@ -1,14 +1,13 @@
 use bevy::prelude::*;
 use bevy_enhanced_input::prelude::*;
 
-use crate::character::movement::MoveIntent;
+use crate::character::components::MoveIntent;
 use crate::player::components::Move;
-use crate::player::components::Player;
 use crate::player::components::PlayerMarker;
 
 pub fn spawn_player(mut commands: Commands) {
     commands.spawn((
-        Player::default(),
+        PlayerMarker,
         actions!(
             PlayerMarker[(
                 Action::<Move>::new(),
