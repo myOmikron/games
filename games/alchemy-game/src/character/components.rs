@@ -19,7 +19,7 @@ impl MoveSpeed {
 
 impl Default for MoveSpeed {
     fn default() -> Self {
-        MoveSpeed(100.0)
+        MoveSpeed(65.0)
     }
 }
 
