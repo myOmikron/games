@@ -13,7 +13,7 @@ bevy_kira_audio = { workspace = true }
 bevy-inspector-egui = { workspace = true, optional = true }
 bevy_yarnspinner = { workspace = true }
 bevy_common_assets = { workspace = true, features = ["json", "ron"] }
-bevy_asset_loader = { workspace = true }
+bevy_asset_loader = { workspace = true, features = ["2d"] }
 bevy_ecs_ldtk = { workspace = true }
 avian2d = { workspace = true }
 bevy_firefly = { workspace = true }

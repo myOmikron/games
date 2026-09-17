@@ -14,7 +14,7 @@ pub struct MoveIntent {
 pub struct MoveSpeed(pub(super) f32);
 
 impl MoveSpeed {
-    pub const HUMAN: Self = Self(100.0);
+    pub const HUMAN: Self = Self(65.0);
 }
 
 impl Default for MoveSpeed {
@@ -30,6 +30,11 @@ impl MoveIntent {
         Self {
             dir: dir.clamp_length_max(1.0),
         }
+    }
+
+    /// The normalized-ish movement direction, zero when standing still.
+    pub fn dir(&self) -> Vec2 {
+        self.dir
     }
 
     pub fn is_moving(&self) -> bool {

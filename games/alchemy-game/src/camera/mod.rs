@@ -1,3 +1,4 @@
+use bevy::camera::ScalingMode;
 use bevy::prelude::*;
 use bevy_firefly::data::FireflyConfig;
 use bevy_firefly::lights::PointLight2d;
@@ -19,7 +20,9 @@ impl Plugin for CameraPlugin {
             commands.spawn((
                 Camera2d,
                 Projection::Orthographic(OrthographicProjection {
-                    scale: 0.25,
+                    scaling_mode: ScalingMode::FixedVertical {
+                        viewport_height: 140.0,
+                    },
                     ..OrthographicProjection::default_2d()
                 }),
                 FireflyConfig::default(),

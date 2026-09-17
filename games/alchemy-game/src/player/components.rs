@@ -4,9 +4,12 @@ use bevy_ecs_ldtk::LdtkEntity;
 use bevy_enhanced_input::prelude::InputAction;
 
 use crate::character::components::Character;
+use crate::character::components::MoveSpeed;
+use crate::player::animation::Facing;
+use crate::player::animation::PlayerAnimation;
 
 #[derive(Component, Reflect, Default, Clone, Debug)]
-#[require(Character)]
+#[require(Character, Facing, PlayerAnimation, MoveSpeed::HUMAN)]
 pub struct PlayerMarker;
 
 #[derive(LdtkEntity, Reflect, Clone, Debug, Default, Bundle)]
