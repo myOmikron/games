@@ -7,7 +7,8 @@ edition = "2024"
 bevy = { workspace = true, features = [
     "2d",
     "serialize",
-    "ui"
+    "ui",
+    "tonemapping_luts",
 ] }
 bevy_kira_audio = { workspace = true }
 bevy-inspector-egui = { workspace = true, optional = true }
